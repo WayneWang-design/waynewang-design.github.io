@@ -76,7 +76,8 @@ def build_page(p, prev_p, next_p):
             ("Style", p.get("style", "")), ("Scope", p.get("scope", "")),
             ("Studio", p.get("team", "")), ("Materials", p.get("materials", ""))]
     meta = "\n".join(
-        f'        <div><div class="k">{k}</div><div class="v">{esc(v)}</div></div>'
+        '        <div{cls}><div class="k">{k}</div><div class="v">{v}</div></div>'.format(
+            cls=' class="wide"' if k == "Materials" else "", k=k, v=esc(v))
         for k, v in rows if v)
 
     # ── 設計概念 + 亮點
@@ -100,10 +101,23 @@ def build_page(p, prev_p, next_p):
     </div>
   </section>'''
 
-    # ── 畫廊
-    cells = "\n".join(
-        f'      <div class="g-item">{slot(f"{root}uploads/{slug}/{i:02d}.jpg", f"{p['title']} 第 {i} 張", "loading=\"lazy\" decoding=\"async\"")}</div>'
-        for i in range(1, p["gallery"] + 1))
+    # ── 畫廊（captions 有寫才出現圖說，沒寫就只有圖）
+    caps = p.get("captions") or {}
+
+    def caption_of(i):
+        if isinstance(caps, list):
+            return caps[i - 1] if i - 1 < len(caps) else ""
+        return caps.get("%02d" % i) or caps.get(str(i)) or ""
+
+    cell_list = []
+    for i in range(1, p["gallery"] + 1):
+        img = slot(f"{root}uploads/{slug}/{i:02d}.jpg",
+                   f"{p['title']} 第 {i} 張",
+                   'loading="lazy" decoding="async"')
+        cap = caption_of(i)
+        cap_html = f'\n        <div class="g-cap">{esc(cap)}</div>' if cap else ""
+        cell_list.append(f'      <div class="g-item">{img}{cap_html}\n      </div>')
+    cells = "\n".join(cell_list)
 
     nav_prev = (f'''    <a class="prev" href="{prev_p["slug"]}.html">
       <div class="dir">← 上一個</div>
