@@ -202,7 +202,7 @@ def build_page(p, prev_p, next_p):
 
 <footer>
   <div>王東群 · Wayne Wang</div>
-  <div>Interior Designer · 阿曼室內裝修設計</div>
+  <div>Interior Designer · 台中</div>
 </footer>
 
 <button class="print-btn" onclick="window.print()"><span class="pb-long">列印 / 存成 PDF</span><span class="pb-short">PDF</span></button>
