@@ -1,0 +1,54 @@
+name: 自動整理圖片並重建網頁
+
+# 只要有人推東西上來（包含直接在 GitHub 網頁上傳照片、編輯 projects.json），
+# 就自動壓縮圖片 + 重新產生 works/ 底下的內頁，然後 commit 回 main。
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'uploads/**'
+      - 'projects.json'
+      - 'build.py'
+      - 'scripts/**'
+  workflow_dispatch:      # 也可以在 Actions 頁面手動按一下執行
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rebuild
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    # 自己 commit 造成的推送不再重跑，避免無限迴圈
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 安裝 Pillow
+        run: pip install --quiet pillow
+
+      - name: 壓縮 / 轉檔圖片
+        run: python scripts/optimize_images.py
+
+      - name: 重新產生內頁
+        run: python build.py
+
+      - name: 有變更就 commit 回去
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add -A
+            git commit -m "chore: 自動壓縮圖片並重建內頁 [skip ci]"
+            git push
+            echo "已更新網站"
+          else
+            echo "沒有需要更新的東西"
+          fi
