@@ -116,7 +116,8 @@ def build_page(p, prev_p, next_p):
                    'loading="lazy" decoding="async"')
         cap = caption_of(i)
         cap_html = f'\n        <div class="g-cap">{esc(cap)}</div>' if cap else ""
-        cell_list.append(f'      <div class="g-item">{img}{cap_html}\n      </div>')
+        cls = " plan" if i in (p.get("plans") or []) else ""
+        cell_list.append(f'      <div class="g-item{cls}">{img}{cap_html}\n      </div>')
     cells = "\n".join(cell_list)
 
     nav_prev = (f'''    <a class="prev" href="{prev_p["slug"]}.html">

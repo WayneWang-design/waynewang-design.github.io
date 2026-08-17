@@ -441,3 +441,14 @@ footer{
 @media print{
   .g-cap{ font-size:8.5pt; padding:5px 0 0; color:var(--t3); }
 }
+
+/* 平面圖：完整顯示不裁切，白底與圖面本身的白融成一片 */
+.g-item.plan .slot{ background:#fff; aspect-ratio:auto !important; }
+.g-item.plan .slot img{ height:auto; object-fit:contain; filter:none; }
+/* 最後一張若落單，補滿整列，右邊不開天窗 */
+.gallery .g-item:last-child:nth-child(3n+2){ grid-column:span 2; }
+.gallery .g-item:last-child:nth-child(3n+2) .slot{ aspect-ratio:16/9; }
+@media screen and (max-width:640px){
+  .gallery .g-item:last-child:nth-child(3n+2){ grid-column:auto; }
+  .gallery .g-item:last-child:nth-child(3n+2) .slot{ aspect-ratio:3/2; }
+}

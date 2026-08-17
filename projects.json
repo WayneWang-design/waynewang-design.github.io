@@ -16,10 +16,13 @@
       "materials": "",
       "concept": [],
       "highlights": [],
-      "gallery": 8,
+      "gallery": 13,
       "scope": "平面規劃 · 3D 視覺 · 施工監管",
       "team": "",
-      "captions": {}
+      "captions": {},
+      "plans": [
+        13
+      ]
     },
     {
       "slug": "shuangxiang-1920",
@@ -36,10 +39,13 @@
       "materials": "",
       "concept": [],
       "highlights": [],
-      "gallery": 8,
+      "gallery": 7,
       "scope": "平面規劃 · 3D 視覺 · 施工監管",
       "team": "",
-      "captions": {}
+      "captions": {},
+      "plans": [
+        7
+      ]
     },
     {
       "slug": "huatan-villa",
@@ -56,10 +62,11 @@
       "materials": "",
       "concept": [],
       "highlights": [],
-      "gallery": 8,
+      "gallery": 7,
       "scope": "平面規劃 · 3D 視覺 · 施工監管",
       "team": "",
-      "captions": {}
+      "captions": {},
+      "plans": []
     },
     {
       "slug": "xiushui-house",
@@ -79,7 +86,11 @@
       "gallery": 8,
       "scope": "平面規劃 · 3D 視覺 · 施工監管",
       "team": "",
-      "captions": {}
+      "captions": {},
+      "plans": [
+        7,
+        8
+      ]
     },
     {
       "slug": "guangyan-clinic",
@@ -99,7 +110,10 @@
       "gallery": 8,
       "scope": "平面規劃 · 3D 視覺 · 施工監管",
       "team": "",
-      "captions": {}
+      "captions": {},
+      "plans": [
+        8
+      ]
     },
     {
       "slug": "guanxin-clinic",
@@ -116,10 +130,13 @@
       "materials": "",
       "concept": [],
       "highlights": [],
-      "gallery": 8,
+      "gallery": 9,
       "scope": "平面規劃 · 3D 視覺 · 施工監管",
       "team": "",
-      "captions": {}
+      "captions": {},
+      "plans": [
+        9
+      ]
     }
   ]
 }
