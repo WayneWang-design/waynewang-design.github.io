@@ -116,7 +116,13 @@ def build_page(p, prev_p, next_p):
                    'loading="lazy" decoding="async"')
         cap = caption_of(i)
         cap_html = f'\n        <div class="g-cap">{esc(cap)}</div>' if cap else ""
-        cls = " plan" if i in (p.get("plans") or []) else ""
+        is_plan = i in (p.get("plans") or [])
+        if is_plan:
+            # 平面圖：整列滿版，可點開看原尺寸
+            img = (f'<a class="plan-zoom" href="{root}uploads/{slug}/{i:02d}.jpg" '
+                   f'target="_blank" rel="noopener" title="點擊看大圖">{img}'
+                   f'<span class="zoom-tag">點圖放大</span></a>')
+        cls = " plan" if is_plan else ""
         cell_list.append(f'      <div class="g-item{cls}">{img}{cap_html}\n      </div>')
     cells = "\n".join(cell_list)
 

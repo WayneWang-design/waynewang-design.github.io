@@ -443,8 +443,18 @@ footer{
 }
 
 /* 平面圖：完整顯示不裁切，白底與圖面本身的白融成一片 */
+.g-item.plan{ grid-column:1 / -1 !important; }          /* 平面圖一律佔滿整列 */
 .g-item.plan .slot{ background:#fff; aspect-ratio:auto !important; }
 .g-item.plan .slot img{ height:auto; object-fit:contain; filter:none; }
+.plan-zoom{ display:block; position:relative; text-decoration:none; }
+.zoom-tag{
+  position:absolute; right:14px; bottom:14px; z-index:3;
+  font-family:var(--zh); font-size:11.5px; font-weight:300; letter-spacing:.1em;
+  color:var(--t1); background:rgba(23,21,18,.72); padding:6px 12px;
+  backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); transition:background .25s;
+}
+@media (hover:hover){ .plan-zoom:hover .zoom-tag{ background:var(--ac); } }
+@media print{ .zoom-tag{ display:none; } }
 /* 最後一張若落單，補滿整列，右邊不開天窗 */
 .gallery .g-item:last-child:nth-child(3n+2){ grid-column:span 2; }
 .gallery .g-item:last-child:nth-child(3n+2) .slot{ aspect-ratio:16/9; }
