@@ -9,7 +9,7 @@
 import io, json, os, re
 
 BASE = os.path.dirname(os.path.abspath(__file__))
-SITE = "https://wayne7111184-create.github.io/"
+SITE = "https://waynewang-design.github.io/"
 
 def esc(s):
     return (s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")

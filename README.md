@@ -2,13 +2,13 @@
 
 王東群個人作品集與簡歷網站。純靜態 HTML，沒有框架、沒有資料庫。
 
-**線上網址：https://wayne7111184-create.github.io/**
+**線上網址：https://waynewang-design.github.io/**
 
 ---
 
 ## 我要加照片（不用裝任何軟體，手機也能做）
 
-1. 打開 https://github.com/wayne7111184-create/wayne7111184-create.github.io
+1. 打開 https://github.com/WayneWang-design/waynewang-design.github.io
 2. 進 `uploads/` → 點對應案子的資料夾（下表）
 3. 右上角 **Add file → Upload files**，把照片拖進去
 4. 檔名照 `01.jpg`、`02.jpg`⋯ 排（最多 8 張），最下面按 **Commit changes**
@@ -46,8 +46,8 @@
 ## 換電腦怎麼接手
 
 ```bash
-git clone https://github.com/wayne7111184-create/wayne7111184-create.github.io.git
-cd wayne7111184-create.github.io
+git clone https://github.com/WayneWang-design/waynewang-design.github.io.git
+cd waynewang-design.github.io
 ```
 
 直接用瀏覽器打開 `index.html` 就能預覽。改完推回去：
