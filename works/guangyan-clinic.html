@@ -68,7 +68,7 @@
       </div>
       <div class="g-item"><div class="slot"><img src="../uploads/guangyan-clinic/07.jpg" alt="光妍醫美診所 第 7 張" loading="lazy" decoding="async" onerror="imgFallback(this)"><div class="hint"><b>../uploads/guangyan-clinic/07.jpg</b>光妍醫美診所 第 7 張</div></div>
       </div>
-      <div class="g-item plan"><a class="plan-zoom" href="../uploads/guangyan-clinic/08.jpg" target="_blank" rel="noopener" title="點擊看大圖"><div class="slot"><img src="../uploads/guangyan-clinic/08.jpg" alt="光妍醫美診所 第 8 張" loading="lazy" decoding="async" onerror="imgFallback(this)"><div class="hint"><b>../uploads/guangyan-clinic/08.jpg</b>光妍醫美診所 第 8 張</div></div><span class="zoom-tag">點圖放大</span></a>
+      <div class="g-item plan"><div class="slot"><img src="../uploads/guangyan-clinic/08.jpg" alt="光妍醫美診所 第 8 張" loading="lazy" decoding="async" onerror="imgFallback(this)"><div class="hint"><b>../uploads/guangyan-clinic/08.jpg</b>光妍醫美診所 第 8 張</div></div>
       </div>
   </div>
   <a class="p-back" href="../index.html#works">← 回作品列表</a>
@@ -139,6 +139,68 @@ function imgFallback(img){
     img.remove();
   }
 }
+
+/* ── 燈箱：點任何一張圖都能放大看，左右鍵換圖、Esc 關閉 ── */
+(function(){
+  var imgs = [], idx = 0, box, big, cap, count;
+
+  function build(){
+    box = document.createElement('div');
+    box.className = 'lb';
+    box.innerHTML =
+      '<div class="lb-count"></div>' +
+      '<img alt="">' +
+      '<div class="lb-cap"></div>' +
+      '<button class="lb-btn lb-prev" aria-label="上一張">‹</button>' +
+      '<button class="lb-btn lb-next" aria-label="下一張">›</button>' +
+      '<button class="lb-btn lb-close" aria-label="關閉">×</button>';
+    document.body.appendChild(box);
+    big = box.querySelector('img');
+    cap = box.querySelector('.lb-cap');
+    count = box.querySelector('.lb-count');
+    box.querySelector('.lb-prev').onclick = function(e){ e.stopPropagation(); step(-1); };
+    box.querySelector('.lb-next').onclick = function(e){ e.stopPropagation(); step(1); };
+    box.querySelector('.lb-close').onclick = close;
+    box.onclick = function(e){ if(e.target === box || e.target === big) close(); };
+  }
+
+  function show(i){
+    idx = (i + imgs.length) % imgs.length;
+    var el = imgs[idx];
+    big.src = el.getAttribute('src');
+    var c = el.closest('.g-item') ? el.closest('.g-item').querySelector('.g-cap') : null;
+    cap.textContent = c ? c.textContent : '';
+    count.textContent = (idx + 1) + ' / ' + imgs.length;
+  }
+  function step(d){ show(idx + d); }
+  function close(){ box.classList.remove('on'); document.body.style.overflow = ''; }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    imgs = [].slice.call(document.querySelectorAll('.gallery .slot img'));
+    if(!imgs.length) return;
+    build();
+    imgs.forEach(function(el, i){
+      el.addEventListener('click', function(){
+        show(i); box.classList.add('on'); document.body.style.overflow = 'hidden';
+      });
+    });
+    document.addEventListener('keydown', function(e){
+      if(!box.classList.contains('on')) return;
+      if(e.key === 'Escape') close();
+      if(e.key === 'ArrowLeft') step(-1);
+      if(e.key === 'ArrowRight') step(1);
+    });
+    /* 手機左右滑動換圖 */
+    var x0 = null;
+    box.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, {passive:true});
+    box.addEventListener('touchend', function(e){
+      if(x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      if(Math.abs(dx) > 50) step(dx < 0 ? 1 : -1);
+      x0 = null;
+    }, {passive:true});
+  });
+})();
 </script>
 </body>
 </html>
