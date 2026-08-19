@@ -2,379 +2,287 @@
   "_note": "這個檔可以用後台編輯（app.pagescms.org），也可以直接改。images 是每個案子的圖片清單，順序就是網頁上的顯示順序；plan 打勾代表那張是平面圖（白底完整顯示）。空欄位不會出現在網頁上。",
   "projects": [
     {
-      "slug": "guotai",
-      "no": "01",
       "title": "國泰層峰",
       "sub": "設計案",
+      "no": "01",
       "typeZh": "住宅",
       "typeEn": "Residential",
       "year": "2024",
       "cover": "uploads/work-01.jpg",
-      "location": "",
-      "size": "",
-      "style": "",
-      "materials": "",
-      "concept": [],
-      "highlights": [],
+      "size": "86",
       "scope": "平面規劃 · 3D 視覺 · 施工監管",
-      "team": "",
       "images": [
         {
           "src": "uploads/guotai/01.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guotai/02.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guotai/03.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guotai/04.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guotai/05.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guotai/06.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guotai/07.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guotai/08.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guotai/09.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guotai/10.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guotai/11.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guotai/12.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guotai/13.jpg",
-          "caption": "",
           "plan": true
         }
-      ]
+      ],
+      "slug": "guotai"
     },
     {
-      "slug": "shuangxiang-1920",
-      "no": "02",
       "title": "雙橡園 1920",
       "sub": "設計規劃案",
+      "no": "02",
       "typeZh": "住宅",
       "typeEn": "Residential",
       "year": "2026",
       "cover": "uploads/work-02.jpg",
-      "location": "",
-      "size": "",
-      "style": "",
-      "materials": "",
-      "concept": [],
-      "highlights": [],
       "scope": "平面規劃 · 3D 視覺 · 施工監管",
-      "team": "",
       "images": [
         {
           "src": "uploads/shuangxiang-1920/01.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/shuangxiang-1920/02.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/shuangxiang-1920/03.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/shuangxiang-1920/04.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/shuangxiang-1920/05.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/shuangxiang-1920/06.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/shuangxiang-1920/07.jpg",
-          "caption": "",
           "plan": true
         }
-      ]
+      ],
+      "slug": "shuangxiang-1920"
     },
     {
-      "slug": "huatan-villa",
-      "no": "03",
       "title": "花壇別墅",
       "sub": "設計案",
+      "no": "03",
       "typeZh": "住宅",
       "typeEn": "Residential",
       "year": "2026",
       "cover": "uploads/work-03.jpg",
-      "location": "",
-      "size": "",
-      "style": "",
-      "materials": "",
-      "concept": [],
-      "highlights": [],
       "scope": "平面規劃 · 3D 視覺 · 施工監管",
-      "team": "",
       "images": [
         {
           "src": "uploads/huatan-villa/01.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/huatan-villa/02.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/huatan-villa/03.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/huatan-villa/04.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/huatan-villa/05.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/huatan-villa/06.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/huatan-villa/07.jpg",
-          "caption": "",
           "plan": false
         }
-      ]
+      ],
+      "slug": "huatan-villa"
     },
     {
-      "slug": "xiushui-house",
-      "no": "04",
       "title": "秀水透天",
       "sub": "設計案",
+      "no": "04",
       "typeZh": "住宅",
       "typeEn": "Residential",
       "year": "2024",
       "cover": "uploads/work-04.jpg",
-      "location": "",
-      "size": "",
-      "style": "",
-      "materials": "",
-      "concept": [],
-      "highlights": [],
       "scope": "平面規劃 · 3D 視覺 · 施工監管",
-      "team": "",
       "images": [
         {
           "src": "uploads/xiushui-house/01.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/xiushui-house/02.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/xiushui-house/03.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/xiushui-house/04.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/xiushui-house/05.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/xiushui-house/06.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/xiushui-house/07.jpg",
-          "caption": "",
           "plan": true
         },
         {
           "src": "uploads/xiushui-house/08.jpg",
-          "caption": "",
           "plan": true
         }
-      ]
+      ],
+      "slug": "xiushui-house"
     },
     {
-      "slug": "guangyan-clinic",
-      "no": "05",
       "title": "光妍醫美診所",
       "sub": "設計案",
+      "no": "05",
       "typeZh": "商業空間",
       "typeEn": "Commercial",
       "year": "2026",
       "cover": "uploads/work-05.jpg",
-      "location": "",
-      "size": "",
-      "style": "",
-      "materials": "",
-      "concept": [],
-      "highlights": [],
       "scope": "平面規劃 · 3D 視覺 · 施工監管",
-      "team": "",
       "images": [
         {
           "src": "uploads/guangyan-clinic/01.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guangyan-clinic/02.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guangyan-clinic/03.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guangyan-clinic/04.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guangyan-clinic/05.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guangyan-clinic/06.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guangyan-clinic/07.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guangyan-clinic/08.jpg",
-          "caption": "",
           "plan": true
         }
-      ]
+      ],
+      "slug": "guangyan-clinic"
     },
     {
-      "slug": "guanxin-clinic",
-      "no": "06",
       "title": "觀昕預防醫學診所",
       "sub": "設計案",
+      "no": "06",
       "typeZh": "商業空間",
       "typeEn": "Commercial",
       "year": "2025",
       "cover": "uploads/work-06.jpg",
-      "location": "",
-      "size": "",
-      "style": "",
-      "materials": "",
-      "concept": [],
-      "highlights": [],
       "scope": "平面規劃 · 3D 視覺 · 施工監管",
-      "team": "",
       "images": [
         {
           "src": "uploads/guanxin-clinic/01.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guanxin-clinic/02.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guanxin-clinic/03.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guanxin-clinic/04.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guanxin-clinic/05.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guanxin-clinic/06.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guanxin-clinic/07.jpg",
-          "caption": "",
           "plan": false
         },
         {
           "src": "uploads/guanxin-clinic/08.jpg",
-          "caption": "",
           "plan": true
         }
-      ]
+      ],
+      "slug": "guanxin-clinic"
     }
   ]
 }
