@@ -11,7 +11,6 @@ content:
     label: 作品案子
     type: file
     path: projects.json
-    icon: image
     fields:
       - name: _note
         label: 使用說明
