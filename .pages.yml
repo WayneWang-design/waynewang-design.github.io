@@ -20,7 +20,10 @@ content:
       - name: projects
         label: 案子
         type: object
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{no} · {title}{sub}"
         fields:
           - name: title
             label: 案名
@@ -73,7 +76,10 @@ content:
           - name: images
             label: 空間照片（拖曳可排序，第 1、4、7 張會是滿版大圖）
             type: object
-            list: true
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{index}. {caption}"
             fields:
               - name: src
                 label: 圖片
