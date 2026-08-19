@@ -1,5 +1,5 @@
 {
-  "_note": "改內容只要改這個檔，然後跑 python build.py（或直接 push，雲端會自動跑）。空字串、空陣列、空物件的欄位會自動隱藏，不會在網頁上留空格。captions 是每張圖底下的說明，key 對應圖片檔名（01 = 01.jpg），只寫要標的那幾張就好。",
+  "_note": "這個檔可以用後台編輯（app.pagescms.org），也可以直接改。images 是每個案子的圖片清單，順序就是網頁上的顯示順序；plan 打勾代表那張是平面圖（白底完整顯示）。空欄位不會出現在網頁上。",
   "projects": [
     {
       "slug": "guotai",
@@ -16,12 +16,74 @@
       "materials": "",
       "concept": [],
       "highlights": [],
-      "gallery": 13,
       "scope": "平面規劃 · 3D 視覺 · 施工監管",
       "team": "",
-      "captions": {},
-      "plans": [
-        13
+      "images": [
+        {
+          "src": "uploads/guotai/01.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guotai/02.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guotai/03.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guotai/04.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guotai/05.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guotai/06.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guotai/07.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guotai/08.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guotai/09.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guotai/10.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guotai/11.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guotai/12.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guotai/13.jpg",
+          "caption": "",
+          "plan": true
+        }
       ]
     },
     {
@@ -39,12 +101,44 @@
       "materials": "",
       "concept": [],
       "highlights": [],
-      "gallery": 7,
       "scope": "平面規劃 · 3D 視覺 · 施工監管",
       "team": "",
-      "captions": {},
-      "plans": [
-        7
+      "images": [
+        {
+          "src": "uploads/shuangxiang-1920/01.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/shuangxiang-1920/02.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/shuangxiang-1920/03.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/shuangxiang-1920/04.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/shuangxiang-1920/05.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/shuangxiang-1920/06.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/shuangxiang-1920/07.jpg",
+          "caption": "",
+          "plan": true
+        }
       ]
     },
     {
@@ -62,11 +156,45 @@
       "materials": "",
       "concept": [],
       "highlights": [],
-      "gallery": 7,
       "scope": "平面規劃 · 3D 視覺 · 施工監管",
       "team": "",
-      "captions": {},
-      "plans": []
+      "images": [
+        {
+          "src": "uploads/huatan-villa/01.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/huatan-villa/02.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/huatan-villa/03.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/huatan-villa/04.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/huatan-villa/05.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/huatan-villa/06.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/huatan-villa/07.jpg",
+          "caption": "",
+          "plan": false
+        }
+      ]
     },
     {
       "slug": "xiushui-house",
@@ -83,13 +211,49 @@
       "materials": "",
       "concept": [],
       "highlights": [],
-      "gallery": 8,
       "scope": "平面規劃 · 3D 視覺 · 施工監管",
       "team": "",
-      "captions": {},
-      "plans": [
-        7,
-        8
+      "images": [
+        {
+          "src": "uploads/xiushui-house/01.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/xiushui-house/02.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/xiushui-house/03.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/xiushui-house/04.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/xiushui-house/05.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/xiushui-house/06.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/xiushui-house/07.jpg",
+          "caption": "",
+          "plan": true
+        },
+        {
+          "src": "uploads/xiushui-house/08.jpg",
+          "caption": "",
+          "plan": true
+        }
       ]
     },
     {
@@ -107,12 +271,49 @@
       "materials": "",
       "concept": [],
       "highlights": [],
-      "gallery": 8,
       "scope": "平面規劃 · 3D 視覺 · 施工監管",
       "team": "",
-      "captions": {},
-      "plans": [
-        8
+      "images": [
+        {
+          "src": "uploads/guangyan-clinic/01.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guangyan-clinic/02.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guangyan-clinic/03.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guangyan-clinic/04.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guangyan-clinic/05.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guangyan-clinic/06.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guangyan-clinic/07.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guangyan-clinic/08.jpg",
+          "caption": "",
+          "plan": true
+        }
       ]
     },
     {
@@ -130,12 +331,49 @@
       "materials": "",
       "concept": [],
       "highlights": [],
-      "gallery": 8,
       "scope": "平面規劃 · 3D 視覺 · 施工監管",
       "team": "",
-      "captions": {},
-      "plans": [
-        8
+      "images": [
+        {
+          "src": "uploads/guanxin-clinic/01.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guanxin-clinic/02.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guanxin-clinic/03.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guanxin-clinic/04.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guanxin-clinic/05.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guanxin-clinic/06.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guanxin-clinic/07.jpg",
+          "caption": "",
+          "plan": false
+        },
+        {
+          "src": "uploads/guanxin-clinic/08.jpg",
+          "caption": "",
+          "plan": true
+        }
       ]
     }
   ]

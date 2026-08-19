@@ -163,22 +163,17 @@ def build_page(p, prev_p, next_p):
     </div>
   </section>'''
 
-    # ── 畫廊（captions 有寫才出現圖說，沒寫就只有圖）
-    caps = p.get("captions") or {}
-
-    def caption_of(i):
-        if isinstance(caps, list):
-            return caps[i - 1] if i - 1 < len(caps) else ""
-        return caps.get("%02d" % i) or caps.get(str(i)) or ""
-
+    # ── 畫廊：順序、圖說、平面圖標記都來自 projects.json 的 images 清單
     cell_list = []
-    for i in range(1, p["gallery"] + 1):
-        img = slot(f"{root}uploads/{slug}/{i:02d}.jpg",
-                   f"{p['title']} 第 {i} 張",
+    for i, im in enumerate(p.get("images") or [], 1):
+        src = (im.get("src") or "").lstrip("/")
+        if not src:
+            continue
+        img = slot(f"{root}{src}", f"{p['title']} 第 {i} 張",
                    'loading="lazy" decoding="async"')
-        cap = caption_of(i)
+        cap = im.get("caption") or ""
         cap_html = f'\n        <div class="g-cap">{esc(cap)}</div>' if cap else ""
-        cls = " plan" if i in (p.get("plans") or []) else ""
+        cls = " plan" if im.get("plan") else ""
         cell_list.append(f'      <div class="g-item{cls}">{img}{cap_html}\n      </div>')
     cells = "\n".join(cell_list)
 

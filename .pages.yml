@@ -1,0 +1,90 @@
+# Pages CMS 後台設定（app.pagescms.org）
+# 改這裡等於改網站；存檔後 GitHub 會自動重建頁面，約兩分鐘生效。
+
+media:
+  input: uploads
+  output: uploads
+  categories: [image]
+
+content:
+  - name: projects
+    label: 作品案子
+    type: file
+    path: projects.json
+    icon: image
+    fields:
+      - name: _note
+        label: 使用說明
+        type: text
+        description: 給自己看的備註，改不改都可以
+
+      - name: projects
+        label: 案子
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: 案名
+            type: string
+          - name: sub
+            label: 副標（設計案 / 設計規劃案）
+            type: string
+          - name: no
+            label: 編號（01～06，決定首頁排序標號）
+            type: string
+          - name: typeZh
+            label: 類型
+            type: select
+            options:
+              values: [住宅, 商業空間, 別墅, 透天厝, 辦公空間]
+          - name: typeEn
+            label: 類型（英文，顯示在內頁小標）
+            type: select
+            options:
+              values: [Residential, Commercial, Villa, Townhouse, Office]
+          - name: year
+            label: 年份
+            type: string
+          - name: cover
+            label: 封面圖（首頁那張）
+            type: image
+          - name: location
+            label: 地點（空白就不顯示）
+            type: string
+          - name: size
+            label: 坪數（空白就不顯示）
+            type: string
+          - name: style
+            label: 風格（空白就不顯示）
+            type: string
+          - name: materials
+            label: 主要材質（空白就不顯示）
+            type: text
+          - name: scope
+            label: 服務範圍
+            type: string
+          - name: concept
+            label: 設計概念（一段一格）
+            type: text
+            list: true
+          - name: highlights
+            label: 設計亮點（一句一格）
+            type: string
+            list: true
+          - name: images
+            label: 空間照片（拖曳可排序，第 1、4、7 張會是滿版大圖）
+            type: object
+            list: true
+            fields:
+              - name: src
+                label: 圖片
+                type: image
+              - name: caption
+                label: 圖說（客廳、主臥⋯留空就不顯示）
+                type: string
+              - name: plan
+                label: 這張是平面圖
+                type: boolean
+          - name: slug
+            label: 網址代號（改了舊連結會失效，非必要別動）
+            type: string
