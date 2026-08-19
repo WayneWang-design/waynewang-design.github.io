@@ -129,11 +129,11 @@ function imgFallback(img){
 def build_page(p, prev_p, next_p):
     root = "../"
     slug = p["slug"]
-    full = f'{p["title"]}{p["sub"]}'
-    desc = f'{full}｜{p["typeZh"]} · {p["year"]}｜王東群 Wayne Wang 室內設計作品'
+    full = f'{p.get("title","")}{p.get("sub","")}'
+    desc = f'{full}｜{p.get("typeZh","")} · {p.get("year","")}｜王東群 Wayne Wang 室內設計作品'
 
     # ── 專案資訊（空的欄位不出現）
-    rows = [("Type", p["typeZh"]), ("Year", p["year"]),
+    rows = [("Type", p.get("typeZh", "")), ("Year", p.get("year", "")),
             ("Location", p.get("location", "")), ("Size", p.get("size", "")),
             ("Style", p.get("style", "")), ("Scope", p.get("scope", "")),
             ("Studio", p.get("team", "")), ("Materials", p.get("materials", ""))]
@@ -144,11 +144,11 @@ def build_page(p, prev_p, next_p):
 
     # ── 設計概念 + 亮點
     body = ""
-    if p["concept"] or p["highlights"]:
-        paras = "\n          ".join(f"<p>{esc(t)}</p>" for t in p["concept"])
+    if p.get("concept") or p.get("highlights"):
+        paras = "\n          ".join(f"<p>{esc(t)}</p>" for t in p.get("concept") or [])
         points = ""
-        if p["highlights"]:
-            lis = "\n            ".join(f"<li>{esc(t)}</li>" for t in p["highlights"])
+        if p.get("highlights"):
+            lis = "\n            ".join(f"<li>{esc(t)}</li>" for t in p.get("highlights") or [])
             points = f'''
         <ul class="p-points">
             {lis}
@@ -179,11 +179,11 @@ def build_page(p, prev_p, next_p):
 
     nav_prev = (f'''    <a class="prev" href="{prev_p["slug"]}.html">
       <div class="dir">← 上一個</div>
-      <div class="nm">{esc(prev_p["title"])}</div>
+      <div class="nm">{esc(prev_p.get("title",""))}</div>
     </a>''')
     nav_next = (f'''    <a class="next" href="{next_p["slug"]}.html">
       <div class="dir">下一個 →</div>
-      <div class="nm">{esc(next_p["title"])}</div>
+      <div class="nm">{esc(next_p.get("title",""))}</div>
     </a>''')
 
     return f'''<!DOCTYPE html>
@@ -199,7 +199,7 @@ def build_page(p, prev_p, next_p):
 <meta property="og:url" content="{SITE}works/{slug}.html">
 <meta property="og:title" content="{esc(full)} — 王東群 Wayne Wang">
 <meta property="og:description" content="{esc(desc)}">
-<meta property="og:image" content="{SITE}{p["cover"]}">
+<meta property="og:image" content="{SITE}{p.get("cover","")}">
 <meta property="og:locale" content="zh_TW">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -212,12 +212,12 @@ def build_page(p, prev_p, next_p):
 {NAV.format(root=root)}
 
 <header class="p-hero">
-  {slot(root + p["cover"], p["title"], 'fetchpriority="high" decoding="async"')}
+  {slot(root + p.get("cover",""), p.get("title",""), 'fetchpriority="high" decoding="async"')}
   <div class="p-head">
     <div class="inner">
-      <div class="p-no">Project {p["no"]}</div>
-      <h1 class="p-title">{esc(p["title"])}<small>{esc(p["sub"])}</small></h1>
-      <div class="p-sub">{p["typeEn"]} · {p["typeZh"]} · {p["year"]}</div>
+      <div class="p-no">Project {p.get("no","")}</div>
+      <h1 class="p-title">{esc(p.get("title",""))}<small>{esc(p.get("sub",""))}</small></h1>
+      <div class="p-sub">{p.get("typeEn","")} · {p.get("typeZh","")} · {p.get("year","")}</div>
     </div>
   </div>
 </header>
